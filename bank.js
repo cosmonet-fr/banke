@@ -9,7 +9,7 @@ class BankAccount {
     console.log('Le solde de ' + this.user + 'est de ' + this.money + ' BitCointCash.');
   }
   addCash(sumDeposited) {
-    
+
     if ( sumDeposited > 0 ) {
       this.money = this.money + sumDeposited;
       console.log('Le nouveau solde de ' + this.user + ' est de ' + this.money + ' BitCointCash après ce dépot.');
@@ -26,7 +26,7 @@ class BankAccount {
       } else {
         console.log('Le découvert autorisé de ' + this.user + ' ne permet pas ce retrait.');
      }
-      
+
     } else {
       console.log('Erreur ! Un retrait négatif ou null est interdit !');
     }
@@ -38,9 +38,8 @@ const picsouAccount = new BankAccount (
   76098,
   -700);
 
-console.log(picsouAccount.currentCash());
+picsouAccount.currentCash();
 
-console.log(picsouAccount.addCash(500));
+picsouAccount.addCash(500);
 
-console.log(picsouAccount.removCash(77298));
-
+picsouAccount.removCash(77298);
